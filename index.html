@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Learning Platform</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Python Learning Platform</h1>
+            <p>Track your progress and improve your Python skills!</p>
+            <div id="progress">Progress: <span id="progress-bar">0%</span></div>
+        </header>
+
+        <main>
+            <section id="lesson-section">
+                <h2>Lesson 1: Basics</h2>
+                <p>Type a Python command to print "Hello, World!"</p>
+                <input type="text" id="user-input" placeholder="e.g., print('Hello, World!')">
+                <button onclick="checkAnswer()">Submit</button>
+                <p id="feedback"></p>
+            </section>
+
+            <section id="score-section">
+                <h2>Score</h2>
+                <p>Points: <span id="score">0</span></p>
+            </section>
+
+            <section id="chat-section">
+                <h2>Chat</h2>
+                <div id="chat-box">
+                    <div id="messages"></div>
+                </div>
+                <input type="text" id="chat-input" placeholder="Ask a question...">
+                <button onclick="sendMessage()">Send</button>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,40 +1,36 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Python Learning Platform</title>
+    <title>Plataforma de Aprendizagem Python</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>Python Learning Platform</h1>
-            <p>Track your progress and improve your Python skills!</p>
-            <div id="progress">Progress: <span id="progress-bar">0%</span></div>
+            <h1>Plataforma de Aprendizagem Python</h1>
+            <p>Acompanhe seu progresso e melhore suas habilidades em Python!</p>
+            <div id="progress">Progresso: <span id="progress-bar">0%</span></div>
         </header>
 
         <main>
-            <section id="lesson-section">
-                <h2>Lesson 1: Basics</h2>
-                <p>Type a Python command to print "Hello, World!"</p>
-                <input type="text" id="user-input" placeholder="e.g., print('Hello, World!')">
-                <button onclick="checkAnswer()">Submit</button>
+            <section id="quiz-section">
+                <h2>Quiz de Python</h2>
+                <p id="question-text"></p>
+                <div class="options">
+                    <button id="optionA" onclick="checkAnswer('A')"></button>
+                    <button id="optionB" onclick="checkAnswer('B')"></button>
+                    <button id="optionC" onclick="checkAnswer('C')"></button>
+                    <button id="optionD" onclick="checkAnswer('D')"></button>
+                </div>
                 <p id="feedback"></p>
+                <button onclick="nextQuestion()">Próxima Pergunta</button>
             </section>
 
             <section id="score-section">
-                <h2>Score</h2>
-                <p>Points: <span id="score">0</span></p>
-            </section>
-
-            <section id="chat-section">
-                <h2>Chat</h2>
-                <div id="chat-box">
-                    <div id="messages"></div>
-                </div>
-                <input type="text" id="chat-input" placeholder="Ask a question...">
-                <button onclick="sendMessage()">Send</button>
+                <h2>Pontuação</h2>
+                <p>Pontos: <span id="score">0</span></p>
             </section>
         </main>
     </div>

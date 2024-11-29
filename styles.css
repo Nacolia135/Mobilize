@@ -1,27 +1,38 @@
+/* Estilos gerais */
 body {
     font-family: Arial, sans-serif;
-    background-color: #565656;
+    background-color: #a4a3a3;
     margin: 0;
     padding: 0;
     color: white;
 }
 
 .container {
-    max-width: 800px;
+    max-width: 100%;
     margin: 0 auto;
-    padding: 20px;
+    padding: 20px; /* Reduzido para dispositivos móveis */
     background: #282c34;
     border-radius: 8px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
 }
 
 header {
     text-align: center;
+    margin-top: 20px;
     margin-bottom: 20px;
+}
+
+#logo {
+    width: 120px; /* Ajustado para um tamanho menor */
+    height: auto;
+    margin-top: 20px;
 }
 
 h1 {
     color: #ffffff;
+    font-size: 1.8em;
+    margin-bottom: 10px;
 }
 
 #progress-bar-container {
@@ -36,7 +47,7 @@ h1 {
 #progress-bar {
     width: 0%;
     height: 100%;
-    background-color: #800080;
+    background-color: #00848b; /* Cor da barra de progresso agora em verde */
     transition: width 0.3s ease-in-out;
 }
 
@@ -70,7 +81,7 @@ h1 {
     padding: 15px;
     background-color: #1c1e26;
     color: white;
-    border: 2px solid #800080;
+    border: 2px solid #00848b; /* Cor do borda do botão em verde */
     border-radius: 12px;
     font-size: 1em;
     font-weight: bold;
@@ -80,7 +91,7 @@ h1 {
 }
 
 .options button:hover {
-    background-color: #800080;
+    background-color: #00848b; /* Cor de fundo do botão ao passar o mouse */
     color: white;
     transform: scale(1.05);
 }
@@ -92,7 +103,7 @@ h1 {
 
 .next-btn {
     padding: 10px 20px;
-    background-color: #800080;
+    background-color: #00848b; /* Cor de fundo do botão de próxima pergunta */
     color: white;
     border: none;
     border-radius: 5px;
@@ -103,7 +114,7 @@ h1 {
 }
 
 .next-btn:hover {
-    background-color: #565656;
+    background-color: #242529; /* Cor de fundo do botão ao passar o mouse */
 }
 
 /* Estilos para a resposta correta e incorreta */
@@ -117,23 +128,13 @@ h1 {
 
 /* Estilos para a tela final */
 .final-message {
-    text-align: center;                                             
-    margin-top: 50px;   /* Ajuste o espaço acima da mensagem */
+    text-align: center;
+    margin-top: 50px;
     padding: 20px;
-    max-width: 800px;    /* Limita a largura máxima */
-    background-color: #800080;  /* Cor de fundo */
-    color: white;        /* Cor do texto */
+    background-color: #00848b; /* Cor de fundo da tela final agora em verde */
+    color: white;
     border-radius: 8px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-    
-    /* Centralização horizontal */
-    margin-left: auto;
-    margin-right: auto;
-
-    /* Para centralizar verticalmente dentro de um contêiner flex */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 .final-message h2 {
@@ -147,7 +148,7 @@ h1 {
 
 .restart-btn {
     padding: 10px 20px;
-    background-color: #1c1e26;
+    background-color: #565656;
     color: white;
     border: none;
     border-radius: 5px;
@@ -157,5 +158,59 @@ h1 {
 }
 
 .restart-btn:hover {
-    background-color: gray;
+    background-color: #00848b; /* Cor de fundo do botão de reinício */
+}
+
+/* Media Queries para melhorar a responsividade em celulares */
+@media (max-width: 768px) {
+    #logo {
+        width: 100px; /* Tamanho ajustado para logo em dispositivos menores */
+    }
+
+    h1 {
+        font-size: 1.5em; /* Ajuste do título */
+    }
+
+    #question-text {
+        font-size: 1.3em; /* Ajuste para pergunta em telas menores */
+    }
+
+    .options button {
+        width: 100%; /* Botões ocupam toda a largura disponível em telas pequenas */
+    }
+
+    .container {
+        padding: 10px; /* Menos padding em telas pequenas */
+    }
+
+    #score {
+        font-size: 1em; /* Ajuste do tamanho da pontuação */
+    }
+
+    .next-btn {
+        width: 100%; /* Botão ocupa toda a largura disponível */
+    }
+}
+
+/* Media Queries para dispositivos móveis muito pequenos (ex. celulares antigos) */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.3em; /* Ajuste ainda mais no tamanho do título */
+    }
+
+    #question-text {
+        font-size: 1.1em; /* Ajuste no tamanho da pergunta */
+    }
+
+    .options button {
+        font-size: 0.9em; /* Ajuste no tamanho da fonte dos botões */
+    }
+
+    .container {
+        padding: 5px; /* Menos padding em telas menores */
+    }
+
+    .next-btn {
+        font-size: 0.9em; /* Ajuste no tamanho do botão em telas pequenas */
+    }
 }
